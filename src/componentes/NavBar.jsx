@@ -2,6 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import CartWidget from './CartWidget'
+import { Link } from 'react-router-dom'
 
 export const NavBar = () => {
 
@@ -10,7 +11,7 @@ export const NavBar = () => {
     <header>
       <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-white border-bottom">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
 
             <FontAwesomeIcon 
               icon={faHouse}
@@ -18,14 +19,14 @@ export const NavBar = () => {
               size="lg"
             />
             <span className="ms-2 h5">Toys Collectors</span>
-          </a>
+          </Link>
 
           <div className={"navbar-collapse offcanvas-collapse"}>
             <ul className="navbar-nav me-auto mb-lg-0">
               <li className="nav-item">
-                <a href="/productos" className="nav-link">
+                <Link to="/productos" className="nav-link">
                   Productos
-                </a>
+                </Link>
               </li>
             </ul>
             <CartWidget/>
